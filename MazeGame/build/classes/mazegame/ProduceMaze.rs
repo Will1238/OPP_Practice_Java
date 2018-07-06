@@ -1,0 +1,2 @@
+mazegame.Point
+mazegame.ProduceMaze

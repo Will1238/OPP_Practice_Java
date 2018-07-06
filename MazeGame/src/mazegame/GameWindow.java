@@ -6,7 +6,6 @@
 package mazegame;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
@@ -29,10 +28,11 @@ public class GameWindow extends JFrame{
     private boolean changeMazeEnable;
     
     public GameWindow(ProduceMaze produceMaze){
-        setSize(694, 723);
+        setSize(682, 712);
         setLocation(225, 225);
         setTitle("迷宫-界面");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setResizable(false);
         
         this.produceMaze = produceMaze;
         changeMazeEnable = false;
@@ -170,6 +170,7 @@ class DrawRect extends JComponent{
     
     public DrawRect(ProduceMaze produceMaze){
         super();
+        this.setLocation(0, 0);
         this.produceMaze = produceMaze;
     }
     
